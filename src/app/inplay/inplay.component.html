@@ -1,0 +1,35 @@
+
+                  
+            <div class="panel">
+                <div class="clearfix"> 
+                <a href="javascript:history.go(-1)">
+                <span style="padding-right:30px;" class="pull-left">
+                <i class="fa fa-chevron-circle-left" style="font-size:22px;color:#3a5a7a;text-decoration: none; margin-left: .2em; margin-right: .2em;"></i>BACK</span></a>
+               </div>
+                  <ul class="list-group" *ngFor="let play of Inplay">
+                          <li class="list-group-item"   style="border-top-width: 0px;" >
+                          <div> <a  class="h5">
+                          <div class="media">
+                          <div class="media-body">     
+                           <div style=" float:left;">
+                                <span style="font-size:12px;">{{play.name}}&nbsp;&nbsp;&nbsp;{{play.matchDate}}</span>
+                                <span style="font-size:14px; color:#FF0000;">&nbsp;&nbsp;&nbsp;</span><br>
+                                <span style="color:#0f8a0f;">{{play.matchName}}</span> 
+                               
+                            
+                                
+                          </div>
+                          <span style="padding-right:30px;" class="pull-right">
+                            <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i>
+                          </span>
+                          </div>
+                          </div>
+                          </a>
+                          </div>
+                          </li>
+                          </ul>
+            </div>
+
+
+
+ 

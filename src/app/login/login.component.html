@@ -1,0 +1,44 @@
+ 
+ <div class="container1">
+  <div class="login" style="padding-top: 110px;" >
+    <!-- <h2 class="login-header">Log in</h2> -->
+    <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()"  style="width: 303px;      margin: auto;  border-radius: 5px;">
+      <h4 class="login-header">LOGIN <i class="fa fa-hand-o-down"></i></h4>
+      <div id="errorblock">
+        <p id="errortext"></p>
+    </div>
+      <div class="form-group m-b-20">
+      <p [ngClass]="{ 'has-error': isSubmitted && formControls.username.errors }">
+    
+        <input type="username" class="form-control" placeholder="User Name" formControlName="username">
+        <i class="fa fa-user" aria-hidden="true" ></i> 
+      </p>
+    
+      <div *ngIf="isSubmitted && formControls.username.errors" class="help-block">
+        <div *ngIf="formControls.username.errors.required">User Name is required</div>
+      </div>
+    </div>
+    <div class="form-group m-b-20">
+      <p [ngClass]="{ 'has-error': isSubmitted && formControls.pwd.errors }">
+        <input type="password" class="form-control" placeholder="Password" formControlName="pwd">
+        <i class="fa fa-key" aria-hidden="true" ></i>
+      </p>
+  
+      <div *ngIf="isSubmitted && formControls.pwd.errors" class="help-block">
+        <div *ngIf="formControls.pwd.errors.required">Password is required</div>
+      </div>
+    </div>
+  <!-- 
+   <p>
+      <input type="submit" value="Log in">
+      </p> -->
+       <button type="submit" (click)="getsportsList()" class="btn btn-submit btn-login" style="background: #0088cc;
+      color: white;     width: 259px;    margin-left: -1%;  padding-left: 103px;">Login<i class="fa fa-sign-in" aria-hidden="true" style="       margin-left: 103px;"></i></button>
+   <br><br>
+   <button type="submit" class="btn btn-submit btn-login" style="background: #0088cc;   margin-top: -1em;
+      color: white;  width: 259px;    margin-left: -1%;"><i  class="fa fa-android" style="    margin-right: 13px;" ></i>Download Apk</button>
+  
+  </form>
+  </div>
+  </div>
+  

@@ -1,0 +1,355 @@
+<app-header></app-header>
+
+
+
+<div class="panel">
+  <ul class="list-group">
+    <li class="list-group-item" >
+      <div>
+         <a  [routerLink]="'/inplay'" (click)="getInplay()" class="h5">
+          <div class="media">
+            <div class="media-body">
+              <span>InPlay</span>
+              <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </li>
+
+    <li class="list-group-item">
+      <div> <a [routerLink]="'/offplay'" class="h5">
+          <div class="media">
+            <div class="media-body">
+              <span>OffPlay</span>
+              <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </li>
+
+    <li  *ngFor="let sport of SportsList"  class="list-group-item">
+      <div> 
+        <a  [routerLink]="['/sports',sport.id]"  class="h5">
+          <div class="media">
+            <div class="media-body">
+              <span>{{sport.name}}</span>
+              <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </li>
+
+    <!-- <li class="list-group-item">
+      <div class="media">
+        <div class="media-body">
+          <div> <a href="" class="h5"><span>Tennis</span> <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i></span></a> </div>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="media">
+        <div class="media-body">
+          <div> <a href="" class="h5"><span>Football</span> <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i></span></a> </div>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="media">
+        <div class="media-body">
+          <div> <a href="" class="h5"><span>Kabaddi</span> <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i></span></a> </div>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="media">
+        <div class="media-body">
+          <div> <a href="" class="h5"><span>Motor Sport</span> <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i></span></a> </div>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="media">
+        <div class="media-body">
+          <div> <a href="" class="h5"><span>Mixed Martial Arts</span> <span style="padding-right:30px;"
+                class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i></span></a> </div>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="media">
+        <div class="media-body">
+          <div> <a href="" class="h5"><span>Boxing</span> <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i></span></a> </div>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="media">
+        <div class="media-body">
+          <div> <a href="" class="h5 "><span>Virtual Sports</span> <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i></span></a> </div>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="media">
+        <div class="media-body">
+          <div> <a href="" class="h5 "><span>Binary</span> <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i></span>
+            </a> </div>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="media">
+        <div class="media-body">
+          <div> <a href="" class="h5"><span>Slot Game</span> <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i></span></a> </div>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="media">
+        <div class="media-body">
+          <div> <a href="" class="h5 "><span>Live Casino</span> <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i></span></a> </div>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="media">
+        <div class="media-body">
+          <div> <a href="" class="h5"><span>Cricket Casino</span> <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i></span></a> </div>
+        </div>
+      </div>
+    </li> -->
+    <li class="list-group-item">
+      <div class="media">
+        <div class="media-body">
+          <div> <a href="" class="h5"><span>Rules</span> <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i></span></a> </div>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="media">
+        <div class="media-body">
+          <div> <a href="" class="h5 "><span>Download APK</span> <span style="padding-right:30px;" class="pull-right">
+                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i></span></a> </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="col-12 text-center">
+    <a [routerLink]="'/onedaydragon'">
+      <div class="d-inline-block casino-group-4 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/dragon-tiger.png" class="img-fluid">
+        <div class="title">
+
+          1 Day Dragon Tiger
+        </div>
+        <div class="new-launch blink ">
+          New Launch
+        </div>
+      </div>
+    </a>
+    <a [routerLink]="'/cards32-b'">
+      <div class="d-inline-block casino-group-4 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/32cardsB.png" class="img-fluid">
+        <div class="title">
+
+          32 Cards - B
+        </div>
+        <div class="new-launch blink ">
+          New Launch
+        </div>
+      </div>
+    </a>
+    <a [routerLink]="'/newlaunch'">
+      <div class="d-inline-block casino-group-4 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a1.png" class="img-fluid">
+        <div class="title">
+          Amar Akbar Anthony
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/bollywoood'">
+      <div class="d-inline-block casino-group-4 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a2.png" class="img-fluid">
+        <div class="title">
+          Bollywood Table
+
+        </div>
+
+
+      </div>
+    </a>
+    <a [routerLink]="'/teenpatti'">
+      <div class="d-inline-block casino-group-1 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a3.png" class="img-fluid">
+        <div class="title">
+          Test Teenpatti
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/onedayteenpatti'">
+      <div class="d-inline-block casino-group-1 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a3.png" class="img-fluid">
+        <div class="title">
+          1 Day Teenpatti
+
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/twentyteeenpatti'">
+      <div class="d-inline-block casino-group-1 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a3.png" class="img-fluid">
+        <div class="title">
+          20-20 Teenpatti
+
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/openteenpatti'">
+      <div class="d-inline-block casino-group-1 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a3.png" class="img-fluid">
+        <div class="title">
+          Open Teenpatti
+
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/twentypoker'">
+      <div class="d-inline-block casino-group-2 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a7.png" class="img-fluid">
+        <div class="title">
+          20-20 Poker
+
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/poker'">
+      <div class="d-inline-block casino-group-2 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a7.png" class="img-fluid">
+        <div class="title">
+          1-Day Poker
+
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/sixpoker'">
+      <div class="d-inline-block casino-group-2 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a7.png" class="img-fluid">
+        <div class="title">
+          6 Player Poker
+
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/worlimataka'">
+      <div class="d-inline-block casino-group-3 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a8.png" class="img-fluid">
+        <div class="title">
+          Worli Matka
+
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/instantworli'">
+      <div class="d-inline-block casino-group-3 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a8.png" class="img-fluid">
+        <div class="title">
+          Instant Worli
+
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/lucky7'">
+      <div class="d-inline-block  casino-group-5 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a9.png" class="img-fluid">
+        <div class="title">
+          Lucky 7
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/cards32'">
+      <div class="d-inline-block  casino-group-5 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a10.png" class="img-fluid">
+        <div class="title">
+          32 Cards Casino
+
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/andarbahar'">
+      <div class="d-inline-block  casino-group-5 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a11.png" class="img-fluid">
+        <div class="title">
+          Andar Bahar
+
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/dragon'">
+      <div class="d-inline-block  casino-group-5 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a12.png" class="img-fluid">
+        <div class="title">
+          Dragon Tiger
+
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/lottery'">
+      <div class="d-inline-block  casino-group-5 m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a13.png" class="img-fluid">
+        <div class="title">
+          Lottery
+
+        </div>
+
+      </div>
+    </a>
+    <a [routerLink]="'/threecards'">
+      <div class="d-inline-block  casino-group-5  m-t-10 m-b-10 m-r-20 casino">
+        <img src="/assets/images/a14.png" class="img-fluid">
+        <div class="title">
+          3 Cards Judgement
+
+        </div>
+
+      </div>
+    </a>
+
+  </div>
+
+</div>

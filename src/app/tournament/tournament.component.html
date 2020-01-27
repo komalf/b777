@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+
+
+<div class="panel">
+    <ul class="list-group">
+        <li class="list-group-item"   *ngFor="let match of MatchList">
+            <div> <a [routerLink]="['/match',match.id]"  class="h5">
+                    <div class="media">
+                        <div class="media-body">
+                            <span>
+                                {{match.name}}</span>
+                            <span style="padding-right:30px;" class="pull-right">
+                                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+        </ul>
+        </div>

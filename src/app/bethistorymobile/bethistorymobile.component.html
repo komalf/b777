@@ -1,0 +1,71 @@
+<app-header></app-header>
+
+
+    <div class="panel">
+            <div class="clearfix"> 
+            <a href="javascript:history.go(-1)">
+            <span style="padding-right:30px;">
+            <i class="fa fa-chevron-circle-left" style="font-size:22px;color:#3a5a7a;text-decoration: none; margin-left: .2em; margin-right: .2em;"></i>BACK</span></a>
+           </div>
+
+
+           <div class="form">
+                <h4 style="text-align:center"> Bet history</h4>
+                <div class="tab1">
+                        <select class="select" >
+                            <option value="" selected="selected">Sport Type</option>
+                            <option value="1">Football</option><option value="2">Tennis</option>
+                            <option value="4">Cricket</option>
+                        </select>
+                        <select  class="select">
+                            <option value="" selected="selected">Bet Status</option>
+                            <option value="1">Matched</option>
+                            <option value="2">Deleted</option>
+                            </select>
+                              
+                               
+                  </div>
+
+
+                  <div class="col-lg-5" style="float: left;display: inline-flex;">
+                        <div class="col-xs-12 col-12 col-md-4 form-group" style="margin-top: 10px;">
+                                <input type="text" placeholder="Daterangepicker" class="form-control" bsDaterangepicker
+                                  [bsConfig]="{ isAnimated: true }">
+                              </div>
+                    
+                              <button style="margin-top:5px; text-align: center;    display: inline-block;
+                              height: 35px;margin-top: 8px;" class="btn btn-small btn-primary">Submit</button>
+                            </div>
+
+                  <div class=" tab" style="clear: both;" >
+                        <div style="overflow-x:auto;">
+                    <table class="tbldsk table table-bordered " cellspacing="0">
+                            <thead>
+                                    <tr>
+                                    <th style="min-width:20px;"> No</th>
+                                    <th style="min-width:100px;" class="text-center">Event Name</th>
+                                    <th style="min-width:100px;" class="text-center">Nation</th>
+                                    <th style="min-width:50px;" class="text-center">Event Type</th>
+                                    <th class="text-center">Market Name</th>
+                                    <th style="min-width:20px" class="text-center">Side</th>
+                                    <th style="min-width:20px" class="text-center">Rate</th>
+                                    <th style="min-width:70px" class="text-right">Amount</th>
+                                    <th style="min-width:100px" class="text-center">Placed Date</th>
+                                    </tr>
+                                    </thead>
+                      <tbody>
+                      <tr>
+                        <td colspan="10" style="font-weight: 400;
+                        font-size: 13px;">No data available in table</td>
+                      </tr>
+                      </tbody>
+                      </table>
+                      </div>
+            </div>
+               
+           </div>
+          
+     </div>
+
+
+

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+
+<body>
+
+      <nav class="navbar navbar-default navbar-expand-lg navbar-light" style="
+      margin-bottom: 0px;">
+            <div class="navbar-header d-flex col">
+               <a class="navbar-brand" href="#"><b>LOTUS</b></a>  		
+               <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+                  <span class="navbar-toggler-icon"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+            </div>
+            <!-- Collection of nav links, forms, and other content for toggling -->
+            <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+               <ul class="nav navbar-nav">
+                     <div class="clock">
+                           <time timestamp="timestamp" type="simpleDate" class="ng-isolate-scope ng-binding">Nov 1, 2019</time>
+                           <time timestamp="timestamp" type="time" class="time ng-isolate-scope ng-binding">4:28:41 PM</time>
+                           <div class="clock-timezone-settings">
+                              (
+                              <div class="wrap-dd-menu" data-ng-class="{'disabled': dropdownDisabled}">
+                                 <a href="" dropdown-menu="timezones" dropdown-model="selectedZone" dropdown-onchange="changeTimezone(selected)" analytics-on="" analytics-category="Navigation" analytics-event="Timezone" analytics-label="M" class="ng-isolate-scope">
+                                 <span>+05:30 <i class="apl-icon-angle-down"></i></span>
+                                 </a>
+                              </div>
+                              )
+                           </div>
+                        </div>
+               </ul>
+               <form class="navbar-form form-inline">
+                  <div class="input-group search-box">								
+                     <input type="text" id="search" class="form-control" placeholder="Search events...">
+                     <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                  </div>
+               </form>
+               <ul class="nav navbar-nav navbar-right ml-auto">			
+                  <li class="nav-item">
+                     <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Account</a>
+                     <!-- <ul class="dropdown-menu form-wrapper">					
+                        <li>
+                           <form action="/examples/actions/confirmation.php" method="post">
+                              <p class="hint-text">Sign in with your social media account</p>
+                              <div class="form-group social-btn clearfix">
+                                 <a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
+                                 <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
+                              </div>
+                              <div class="or-seperator"><b>or</b></div>
+                              <div class="form-group">
+                                 <input type="text" class="form-control" placeholder="Username" required="required">
+                              </div>
+                              <div class="form-group">
+                                 <input type="password" class="form-control" placeholder="Password" required="required">
+                              </div>
+                              <input type="submit" class="btn btn btn-block" value="Account">
+                              <div class="form-footer">
+                                 <a href="#">Forgot Your password?</a>
+                              </div>
+                           </form>
+                        </li>
+                     </ul> -->
+                  </li>
+                  <li class="nav-item">
+                     <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Logout</a>
+                     <!-- <ul class="dropdown-menu form-wrapper">					
+                        <li>
+                           <form action="/examples/actions/confirmation.php" method="post">
+                              <p class="hint-text">Fill in this form to create your account!</p>
+                              <div class="form-group">
+                                 <input type="text" class="form-control" placeholder="Username" required="required">
+                              </div>
+                              <div class="form-group">
+                                 <input type="password" class="form-control" placeholder="Password" required="required">
+                              </div>
+                              <div class="form-group">
+                                 <input type="password" class="form-control" placeholder="Confirm Password" required="required">
+                              </div>
+                              <div class="form-group">
+                                 <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms &amp; Conditions</a></label>
+                              </div>
+                              <input type="submit" class="btn btn-primary btn-block" value="Sign up">
+                           </form>
+                        </li>
+                     </ul> -->
+                  </li>
+               </ul>
+            </div>
+         </nav>
+
+
+<!--     
+    <header class="header" style="position: relative;">
+        <div class="boxed-layout-wrapper">
+           <div class="logo-area">
+              <div class="logo" onclick="window.location.href='#/1/0';" data-ng-click="HighlightsCalls(4)"></div>
+           </div>
+           <div class="clock">
+              <time timestamp="timestamp" type="simpleDate" class="ng-isolate-scope ng-binding">Nov 1, 2019</time>
+              <time timestamp="timestamp" type="time" class="time ng-isolate-scope ng-binding">4:28:41 PM</time>
+              <div class="clock-timezone-settings">
+                 (
+                 <div class="wrap-dd-menu" data-ng-class="{'disabled': dropdownDisabled}">
+                    <a href="" dropdown-menu="timezones" dropdown-model="selectedZone" dropdown-onchange="changeTimezone(selected)" analytics-on="" analytics-category="Navigation" analytics-event="Timezone" analytics-label="M" class="ng-isolate-scope">
+                    <span>+05:30 <i class="apl-icon-angle-down"></i></span>
+                    </a>
+                 </div>
+                 )
+              </div>
+           </div>
+           <div class="infobar" style="display: inline-flex;">
+              <ul class="linkbar">
+                
+                 <li class="search-container">
+                    <div class="apl-form search">
+                       <div class="placeholder-wrapper ng-isolate-scope animatable" data-ng-class="{'activated': isActive, 'animatable': isAnimatable}">
+                          <div class="placeholder " placeholder="Search Events"></div>
+                          <div>
+                             <div class="apl-form-icon ">
+                                <i class="apl-icon-search" aria-hidden="true"></i>
+                                <input autocomplete="off" type="text" class="apl-form-large -qa-search-bar ng-pristine ng-untouched ng-empty ng-valid" apl-placeholder="Search Events" data-ng-model="searchText" data-ng-keyup="(searchText.length > 2)?  searchEvent() : ''" data-ng-blur="cancelSearch()" analytics-on="focus" analytics-category="'Header'" analytics-event="'Click'" analytics-label="'Search Bar'">
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                    <ul data-ng-show="searchText.length > 2 &amp;&amp; showSearchText" class="-qa-search-results ng-hide">
+    
+                    </ul>
+                 </li>
+              </ul>
+              <ul class="linkbar login-wrap">
+                 <li data-ng-show="Authcookie!=undefined" class="ng-hide">
+                    <p class="ng-binding">Logged in as -</p>
+                    <p class="last-login ">Last logged in: 
+                       <time timestamp="userData.user.lastLoginTime" type="dateSimpleTime" class="ng-isolate-scope ng-binding">-</time>
+                    </p>
+                 </li>
+             
+               
+             
+                 <li ng-show="Authcookie==undefined">
+                    <button name="login" id="login" class="btn-login apl-btn apl-btn-secondary apl-btn-large btn-login" type="button" data-ng-click="login()" data-ng-disabled="username.length==null  || password.length == null || username.length==''  || password.length == ''" role="button" disabled="disabled">Login</button>
+                 </li>
+                 <li data-ng-show="Authcookie==undefined"><a   class="btn-signup">Sign up</a>
+                 </li>
+                
+              </ul>
+           </div>
+        </div>
+       
+     </header> -->
+
+
+    <div class="content boxed-layout-wrapper">
+
+    <div class="left-pane">
+        <aside class="menu">
+           <nav class="tree-menu">
+              <div class="left-menu-inner current-lvl-0">
+              
+              <ul class="menu-column sport-type- menu-lvl-0">
+
+              <li>
+                 <a class="favourites-link">
+                 <i class="favourites-icon apl-icon-star-o"></i> <span class="link-name ">Favourites</span>
+                 </a>
+              </li>
+              <li>
+                  <a class="favourites-link">
+                  <i class="favourites-icon apl-icon-star-o"></i> <span class="link-name ">Cricket</span>
+                  </a>
+               </li>
+               <li>
+                  <a class="favourites-link">
+                  <i class="favourites-icon apl-icon-star-o"></i> <span class="link-name ">Football</span>
+                  </a>
+               </li>
+               <li>
+                  <a class="favourites-link">
+                  <i class="favourites-icon apl-icon-star-o"></i> <span class="link-name ">Tenis</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#/favourites" class="favourites-link">
+                  <i class="favourites-icon apl-icon-star-o"></i> <span class="link-name ">Horse Racing</span>
+                  </a>
+               </li>
+               
+            
+              <li>
+                 <a class="favourites-link menu-link blog">
+                 <i class="favourites-icon apl-icon-book"></i>
+                 <span class="link-name ">Greyhound Racing</span>
+                 </a>
+              </li>
+           </ul>
+           </div>
+             
+           </nav>
+        </aside>
+     </div>
+
+
+
+
+
+     <div class="mid-pane">
+     <div class="events ng-isolate-scope ng-scope">
+
+     <h1 class="ng-binding">
+
+   <span class="starts-in-label  ng-hide">Cricket</span>
+
+   </h1>
+
+     <table class="market-listing-table apl-table -qa-odds-test ">
+
+        <thead>
+          <tr>
+              <th class="title ">Match</th>
+              <th class="col-first-player _align-center" colspan="2">1</th>
+              <th class="player-draw _align-center " colspan="2">X</th>
+              <th class="col-second-player _align-center" colspan="2">2</th>
+           </tr>
+        </thead>
+
+        <tbody>
+         <tr class="ng-scope">
+
+              <td>
+                 <i></i>
+                 <a class="event-name ng-binding"> <strong> India v South Africa </strong></a>
+              </td>
+
+              <td class="back">
+                 <strong class="odds ng-binding">
+                 1.37
+                 </strong>
+              </td>
+
+          
+              <td class="lay" >
+                 <strong class="odds ng-binding">
+               1.38
+                 </strong>
+              </td>
+
+        
+              <td class="back">
+                 <strong class="odds ng-binding">
+               4.30
+                 </strong>
+              </td>
+ 
+              <td class="lay" >
+                  <strong class="odds ng-binding">
+              4.40
+                  </strong>
+               </td>
+ 
+
+
+               <td class="back">
+                  <strong class="odds ng-binding">
+               22
+                  </strong>
+               </td>
+
+               <td class="lay">
+                  <strong class="odds ng-binding">
+               23
+                  </strong>
+               </td>
+            </tr>
+ 
+
+ 
+           <tr class="ng-scope">
+
+              <td>
+                <i></i>
+                 <a class="event-name ng-binding" > <strong>Oman v Nepal </strong> </a>
+              </td>
+
+              <td class="back">
+                  <strong class="odds ng-binding">
+       
+                  </strong>
+               </td>
+     
+               <td class="lay">
+                  <strong class="odds ng-binding">
+       
+                  </strong>
+               </td>
+          
+               <td class="back">
+                  <strong class="odds ng-binding">
+       
+                  </strong>
+               </td>
+       
+               <td class="lay">
+                  <strong class="odds ng-binding">
+       
+                  </strong>
+               </td>
+          
+               <td class="back">
+                  <strong class="odds ng-binding">
+       
+                  </strong>
+               </td>
+          
+
+               <td class="lay">
+                  <strong class="odds ng-binding">
+       
+                  </strong>
+               </td>
+             </tr>
+             
+             
+             
+             
+             <tr class="ng-scope" >
+              <td>  
+                <li></li>
+                 <a class="event-name ng-binding"><strong>Barbados Tridents v Trinbago Knight Riders</strong></a>
+                 <div class="size" style="float: right;">
+                    <small>
+                      11/10/2019 04:30
+                    </small>
+                  </div>
+              </td>
+
+              <td class="back">
+                  <strong class="odds ng-binding">
+                  2.12
+                  </strong>
+               </td>
+          
+               <td class="lay">
+                  <strong class="odds ng-binding">
+                 2.16
+                  </strong>
+               </td>
+          
+
+
+               <td class="back">
+                  <strong class="odds ng-binding">
+                   -
+                  </strong>
+               </td>
+          
+
+               <td class="lay">
+                  <strong class="odds ng-binding">
+                -
+                  </strong>
+               </td>
+          
+               <td class="back">
+                  <strong class="odds ng-binding">
+                 1.87
+                  </strong>
+               </td>
+          
+               <td class="lay">
+                  <strong class="odds ng-binding">
+                  1.89
+                  </strong>
+               </td>
+
+           </tr>
+    
+        </tbody>
+
+     </table>
+    </div>
+  </div>
+
+
+  <div class="right-pane ng-scope" data-ng-if="hide_rightpanel">
+     
+            <div class="toggleable-list-title">
+               <span><span class="ng-scope">Available Credit:765.99</span></span>
+               <i class="fa fa-angle-down" aria-hidden="true" style="    float: right;    padding-right: 10px;"></i>
+               
+            </div>
+            <div class="switchround" style="margin-top: 15px; display: flex;">
+            <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <p style="padding-top: 5px;
+                padding-left: 10px;">1 Click Betting</p>
+               </div>
+    
+
+      <div class="bet-manager ng-isolate-scope">
+          <h4>Betslip</h4>
+          <ul class="tabs">
+            <li class="tab-bet-slip -active">
+               <a>Betslip</a>
+            </li>
+            
+            <li class="ng-hide">
+               <button class="apl-btn apl-btn-primary" >Edit Stakes</button>
+            </li>
+         </ul>
+
+         <ul class="content rightPanelContent" style="overflow-y: auto; max-height: 790px;">
+          
+            <li id="tab-betslip" class="tab-betslip">
+               
+              <div class="bets betslip ">
+                 
+                  <div>
+             <p class="empty-list-info" >Click on the odds to add selections to the betslip.</p>
+                    
+                  </div>
+               </div>
+            </li>
+           
+         </ul>
+            </div>
+          </div>
+
+             </div>
+             
+        
+
+ 
+
+       <!-- <div class="col-lg-5"    style="    width: 747px;     padding-left: 48px;">
+        <table class="table table-bordered table-sm">
+            <thead>
+              <tr>
+                <th>Match</th>
+                
+                <th colspan="2" style="text-align: center;">1</th>
+                <th colspan="2" style="text-align: center;">2</th>
+                <th colspan="2" style="text-align: center;">3</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>India v South Africa</td>
+                <td style="background-color:  #39c5efad;"> 1.37</td>
+                <td style="background-color:  pink;">1.38</td>
+                <td  style="background-color: #39c5efad;">4.30</td>
+                <td  style="background-color: pink">4.40</td>
+                <td  style="background-color: #39c5efad;">22</td>
+                <td  style="background-color: pink">23</td>
+              </tr>
+              <tr>
+                <td>Oman v Nepal</td>
+                <td  style="background-color: #39c5efad;"></td>
+                <td style="background-color:  pink;"></td>
+                <td  style="background-color: #39c5efad;">-</td>
+                <td style="background-color:  pink;">-</td>
+                <td  style="background-color: #39c5efad;"></td>
+                <td style="background-color:  pink;"></td>
+              </tr>
+              <tr>
+                <td>Barbados Tridents v Trinbago knight Riders</td>
+                <td style="background-color: #39c5efad;">2.12</td>
+                <td style="background-color: pink;">2.16</td>
+                <td style="background-color: #39c5efad;">-</td>
+                <td style="background-color: pink;">-</td>
+                <td style="background-color: #39c5efad;">1.87</td>
+                <td style="background-color: pink;">1.89</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-lg-4" >
+
+        </div>  -->
+
+    
+<div class="footer">
+      <div class="copyright">
+          Rules & Regulations @2016-2019
+         </div>
+</div>
+
+
+
+        <script type="text/javascript">
+         // Prevent dropdown menu from closing when click inside the form
+         $(document).on("click", ".navbar-right .dropdown-menu", function(e){
+            e.stopPropagation();
+         });
+      </script>
+
+
+
+  
+
+</body>
+</html>

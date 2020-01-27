@@ -1,0 +1,51 @@
+/* @import  url(https://fonts.googleapis.com/css?family=Open+Sans:400,700); */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body {
+    /* background: #456; */
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f6f7;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.theme-green .bs-datepicker-head {
+    background-color: #2954f3;
+}
+
+
+div[role="popover"]{
+    display: block !important;
+    top: 16px !important;
+    /* left: -146.6406px !important; */
+    border: none !important;
+    padding: 0px !important;
+  }
+  .popover-content{
+    background: #9e9d9c;
+    border:none;
+    width: 151px;
+    color: #fff;
+  }
+  .popover.bottom>.arrow:after {
+    top: 1px;
+    border-bottom-color: #fff0;
+  }
+  .popover.bottom>.arrow {
+
+    border-bottom-color: rgba(0, 0, 0, 0);
+  }
+  .popover>.arrow, .popover>.arrow:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: none;
+}
+.owl-item{
+  width: 46.6px !important;
+}
+
+.owl-theme{
+  display: flex!important;
+}

@@ -1,0 +1,95 @@
+<app-header></app-header>
+
+
+
+<div class="panel">
+
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let tournamnent of TournamentList">
+            <div>
+                 <a  [routerLink]="['/tournament',sptid,tournamnent.id]" class="h5">
+                    <div class="media">
+                        <div class="media-body">
+                            <span>{{tournamnent.name}}</span>
+                            <span style="padding-right:30px;" class="pull-right">
+                                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+        <!-- <li class="list-group-item">
+            <div> <a [routerLink]="'/inplay'" class="h5">
+                    <div class="media">
+                        <div class="media-body">
+                            <span>International Twenty20 Matches</span>
+                            <span style="padding-right:30px;" class="pull-right">
+                                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div> <a [routerLink]="'/inplay'" class="h5">
+                    <div class="media">
+                        <div class="media-body">
+                            <span>Test Matches</span>
+                            <span style="padding-right:30px;" class="pull-right">
+                                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div> <a [routerLink]="'/inplay'" class="h5">
+                    <div class="media">
+                        <div class="media-body">
+                            <span>Testing Game</span>
+                            <span style="padding-right:30px;" class="pull-right">
+                                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div> <a [routerLink]="'/inplay'" class="h5">
+                    <div class="media">
+                        <div class="media-body">
+                            <span>Testing Game</span>
+                            <span style="padding-right:30px;" class="pull-right">
+                                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div> <a [routerLink]="'/inplay'" class="h5">
+                    <div class="media">
+                        <div class="media-body">
+                            <span>Twenty20 Big Bash</span>
+                            <span style="padding-right:30px;" class="pull-right">
+                                <i class="fa fa-chevron-circle-right" style="font-size:22px;color:#3a5a7a"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </li> -->
+
+       
+        </ul>
+        </div>

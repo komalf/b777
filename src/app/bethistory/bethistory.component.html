@@ -1,0 +1,178 @@
+<html>
+<body>
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light" style="margin-bottom: 0px;">
+        <div class="navbar-header d-flex col">
+            <a class="navbar-brand" href="#"><b>Diamond Exch</b></a>  		
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+                <span class="navbar-toggler-icon"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+           
+            <form class="navbar-form form-inline">
+                <div class="input-group search-box">								
+                    <input type="text" id="search" class="form-control" placeholder="Search here...">
+                    <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right ml-auto">
+                    <li class="nav-item">
+                            <a href="#" style="color:#fff;">Rules</a>
+                            
+                        </li>	
+                    <li class="nav-item">
+                            <a href="#" style="color:#fff;">Download Apk</a>
+                            
+                        </li>		
+                <li class="nav-item">
+                    <a href="#" style="color:#fff;">Balance:20004.00<br>Explosure:0</a>
+                    
+                </li>
+                <li class="dropdown" >
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#fff;"> Ac2021<b class="caret"></b></a>
+                  <ul class="dropdown-menu" style="padding: 10px;">         
+                    <a [routerLink]="'/account'">Account Statement</a><br>
+                    <a [routerLink]="'/unsetteledbet'">Unsetteled bet</a><br>
+                    <a [routerLink]="'/profitlossreport'">Profit Loss</a><br>
+                    <a [routerLink]="'/bethistory'">Belt History</a><br>
+                    <a [routerLink]="'#contact'">Casino Result Report</a><br>
+                    <a [routerLink]="'/setbuttonvalue'">Set Button value</a><br>
+                    <a [routerLink]="'/password'">Change Password</a>
+                      <li><a href="#">Sign Out</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </div>
+</nav>
+<!-- <div class="topnav1" id="myTopnav">
+    <a href="#" class="active">HOME</a>
+    <a href="#">CRICKET</a>
+    <a href="#">TENNIS</a>
+    <a href="#">FOOTBALL</a>      
+   <a routerLink="/button"> LOTTERY</a>
+    <a href="#">WORLI</a>
+    <a href="#">3 CARDS JUDGEMENT</a>
+    <a href="#">LIVE POKER</a>
+    <a href="#">ANDER BAHAR</a>
+    <a href="#">LUCKY7</a>
+    <a href="#">MY MARKET</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div> -->
+  <nav class="navbar-inverse">
+    <div class="container-fluid">
+      
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">CRICKET</a></li>
+        <li><a href="#">TENNIS</a></li>
+        <li><a href="#">FOOTBALL</a></li>
+        <li><a href="#">LOTTERY</a></li>
+        <li><a href="#">WORLI</a></li>
+        <li><a href="#">3 CARDS JUDGEMENT</a></li>
+        <li><a href="#">LIVE POKER</a></li>
+        <li><a href="#">ANDER BAHAR</a></li>
+        <li><a href="#">LUCKY7</a></li>
+        <li><a href="#">MY MARKET</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="content boxed-layout-wrapper">
+  <div class="left-pane" >
+  <div class="sidenav">
+  <button class="dropdown-btn" style="    background-color: #2954f3;
+  color: #fff;
+  font-size: 18px;"><strong>Reports </strong>
+  <i class="fa fa-caret-down"></i>
+ </button>
+ <div class="dropdown-container" style="background: rgb(208, 199, 199);">
+  <a [routerLink]="'/account'"><strong>Account Statement</strong></a>
+  <a [routerLink]="'/unsetteledbet'"><strong>Unsetteled bet</strong></a>
+  <a [routerLink]="'/profitlossreport'"><strong>Profit Loss</strong></a>
+  <a [routerLink]="'/bethistory'"><strong>Belt History</strong></a>
+  <a [routerLink]="'#contact'"><strong>Casino Result Report</strong></a>
+  <a [routerLink]="'/setbuttonvalue'"><strong>Set Button value</strong></a>
+  <a [routerLink]="'/password'"><strong>Change Password</strong></a>
+</div>
+  </div>
+</div>  
+
+
+  <div class="mid-pane" >
+
+<div class="content1">
+    <a href=""> Unsetteled Bet</a>
+        
+    
+  </div>
+  <div class="content2">
+    <div class="maincontaint">
+      <div class="col-xs-12 col-12 col-md-4 form-group" style="margin-top: 10px;">
+        <input type="text"
+               placeholder="Daterangepicker"
+               class="form-control"
+               bsDaterangepicker
+               [bsConfig]="{ isAnimated: true }">
+      </div>
+            <form action="/action_page.php" style="  margin: 10px;">
+              
+                <input type="submit" value="Submit" style="
+                background-color: #2954f3;
+                color: #fff;
+                border: 1px solid;
+                border-radius: 5px;
+                width: 64px;
+                height: 31px; ">
+                </form>
+            </div>
+
+
+      </div>
+
+</div>
+</div>
+
+
+<div class="footer" style="background-color: #2954f3; text-align: center;     padding-top: 10px;
+padding-bottom: 10px;">
+  <a href="" style="color: #fff;">@copyright2016.All Rights Reserved.Powered by Diamond Exchange </a>
+</div>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav1") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav1";
+    }
+  }
+  </script>
+
+
+<script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
+  
+</body>
+</html>

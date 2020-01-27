@@ -1,0 +1,272 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+
+.navbar-fixed-top .navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
+.navbar {
+    border-bottom: 1px solid #d1d4d7;
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    z-index: 1010;
+    border-radius: 0;
+    padding: 0 5px;
+    margin-bottom: 0;
+}
+.navbar .nav {
+    position: relative;
+    left: 0;
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+}
+.navbar-fixed-top{
+    background: #1d2d3d;
+}
+.navbar .nav.pull-right {
+    float: right;
+    margin-right: 0;
+}
+.navbar .nav>li {
+    float: left;
+}
+.dropdown {
+    position: relative;
+}
+.navbar .nav>li>a {
+    float: none;
+    padding: 10px 15px 10px;
+
+    text-decoration: none; 
+}
+.nav>li>a {
+    display: block;
+}
+.navbar .nav>li>.dropdown-menu.pull-right, .navbar .pull-right>li>.dropdown-menu {
+    right: 0;
+    left: auto;
+}
+.show {
+    display: inherit!important;
+}
+.panel {
+    background: #f5f6f7;
+    border: none;
+    margin: 10px;
+    margin-top: 66px;
+}
+
+
+
+
+a:hover{
+    text-decoration:none;
+}
+/*page styling*/
+.bs-callout {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #eee;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    margin-bottom: 5px;
+    padding: 20px;
+}
+.bs-right-panel{
+	padding: 10px;
+	width:100%;
+	float:none;
+	text-align:center;
+	margin:0 auto;
+}
+.bs-right-panel img{
+	width:100%;
+	margin:0;
+	padding:0;
+	
+}
+.bs-callout:last-child {
+    margin-bottom: 0px;
+}
+.bs-callout h4,
+.bs-callout h5 {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+
+.bs-callout-danger h4,
+.bs-callout-danger h5{
+    color: #d9534f;
+}
+
+.header-title {
+    color: #fff;
+}
+.title-thin {
+	font-weight: 300;
+}
+.service-item {
+	margin-bottom: 30px;
+}
+
+.tab-head{
+    background-color: rgba(44, 61, 80, 0.85);
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+    font-weight: bold;
+
+}
+.tbldsk {
+    width: 30%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+@media (max-width: 460px){
+    .tbldsk {
+        width: 100%;
+        margin: 0 auto;
+        background-color: #fff;
+    }
+
+}
+ /* .tab-content{
+    margin-top: 20px;
+}  */
+.nav-tabs {
+    border: 1px solid #ddd;
+}
+#showtv i {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#circle i{
+    color: red;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+
+th{
+    text-align: center;
+    color: #495869;
+    border: 1px solid #ddd;
+    font-weight: 500;
+ 
+}
+td{
+    text-align: center;
+    color: #495869;
+    border: 1px solid #ddd;
+    font-weight: 500;
+}
+.table-striped{
+    background-color: #fff;
+ 
+}
+.table-bordered{
+    background-color: #fff;
+}
+.dropdown-menu li a {
+    display: block;
+   
+    clear: both;
+    font-weight: 400;
+  
+    color: #333;
+    white-space: nowrap;
+}
+.dropdown-menu li a:hover {
+   
+    filter: none;
+    background-color: #13c4a5;
+    color: #fff;
+}
+.tablesmall{
+    margin-left: 425px;
+    margin-right:425px;
+}
+@media only screen and (max-width: 460px) {
+    .tablesmall{
+        margin-left: 0px;
+        margin-right: 0px;
+}
+}
+b, strong {
+    font-weight: 500;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    padding: 5px 0;
+    margin: 2px 0 0;
+
+
+    
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0; 
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.navbar .nav>li>.dropdown-menu.pull-right, .navbar .pull-right>li>.dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+
+@media (max-width: 767px){
+.navbar-nav .open .dropdown-menu {
+    position: absolute;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background: #fff;
+    border: 0;
+    box-shadow: none;
+}
+}
+
+
+
+
+
+
+@media only screen and (max-width: 460px) {
+.navbar-fixed-top{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+     height: 50px;
+}
+.navbar .nav>li>.dropdown-menu.pull-right, .navbar .pull-right>li>.dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+}
+

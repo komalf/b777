@@ -1,0 +1,143 @@
+<app-header></app-header>
+
+<div class="panel">
+  <div class="clearfix">
+    <a href="javascript:history.go(-1)">
+      <span style="padding-right:30px;">
+        <i class="fa fa-chevron-circle-left"
+          style="font-size:22px;color:#3a5a7a;text-decoration: none; margin-left: .2em; margin-right: .2em;"></i>BACK</span></a>
+  </div>
+
+  <div id="navbar-example">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item active">
+        <a class="nav-link" data-toggle="tab" href="#attributes" role="tab">Bhav</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Matched</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#experience" role="tab">Unmatched</a>
+      </li>
+
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane fade in active" id="attributes" name="attributes" role="tabpanel">
+        <div class="tab-head">
+          Assembly Election &gt; MATCH_ODDS
+          <a id="circle" style="float: right;    font-size: 16px;"><span><i class="fa fa-info-circle "></i></span></a>
+          <a id="showtv" style="float: right;"><i class="fa fa-tv"></i></a>
+        </div>
+        <div class="tab-content">
+          <div class="tablesmall">
+            <table class="table table-bordered" style="margin-bottom: 0px;">
+              <tr style=" border: 1px solid white;">
+                <th colspan="2" style=" border: 1px solid white;background:white; border-bottom: 1px solid #e0e4e8;">
+                </th>
+                <th style=" border: 1px solid #e0e4e8;text-align: center;">0</th>
+
+              </tr>
+              <tr>
+                <td
+                  style=" color:red;  border-collapse: collapse; padding: 6px;  text-align: center; border-bottom: 1px solid #e0e4e8; ">
+                  <b>Max Bet Limit 1.00</b></td>
+                <td
+                  style="color:black;background:#72bbef; color:#6b6767; border-collapse: collapse;   padding: 6px;  border-bottom: 1px solid #e0e4e8;text-align: center; ">
+                  <b>Back</b></td>
+                <td
+                  style=" background:#ffb0be; color:#6b6767;  padding: 6px;  border-bottom: 1px solid#e0e4e8;text-align: center; ">
+                  <b>Lay</b></td>
+              </tr>
+
+              <tr>
+                <td
+                  style=" color:#6b6767; border-collapse: collapse;  padding: 6px;  text-align: center; border-bottom: 1px solid #e0e4e8; ">
+                  <b>BJP<br>0</b></td>
+                <td style="background:#72bbef;"></td>
+                <td style="background:#ffb0be;"></td>
+              </tr>
+
+              <tr>
+                <td
+                  style=" color:#6b6767;  border-collapse: collapse; padding: 6px; text-align: center; border-bottom: 1px solid #e0e4e8; ">
+                  <b>CONG<br>0</b></td>
+                <td style=" border: 1px solid #e0e4e8; background:#72bbef;"></td>
+                <td style=" border: 1px solid #e0e4e8; background:#ffb0be;"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="tab-pane fade in" id="profile" name="attributes" role="tabpanel">
+        <div class=" tab-content" style=" margin-top: 20px;">
+          <table class="tbldsk table table-striped  m-b-none text-small">
+            <thead>
+              <tr>
+                <th
+                  style="border:solid 1px #e0e4e8;text-align: center;    background: #fafbfc;color:#3a5a7acf; font-weight: 500;">
+                  Nation</th>
+                <th
+                  style="border:solid 1px #e0e4e8;text-align: center;    background: #fafbfc;color:#3a5a7acf;font-weight: 500;">
+                  ODDS</th>
+                <th
+                  style="border:solid 1px #e0e4e8;text-align: center;    background: #fafbfc;color:#3a5a7acf;font-weight: 500;">
+                  Amount</th>
+              </tr>
+            </thead>
+            <tbody id="matched"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade in " id="experience" name="attributes" role="tabpanel">
+        <div class=" tab-content" style=" margin-top: 20px;">
+          <div class="tbldsk">
+            <button id="Clear" data-toggle="modal" data-target="#myModal" style="margin:2px 5px;"
+              class="btn btn-small btn-danger">Clear All</button>
+          </div>
+          <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header" style="border-bottom-width: 0px;">
+                  <h4 class="modal-title">galexyexch9.com says</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                  Remove all?
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer" style="border-top-width: 0px;">
+                  <button type="button" class="btn btn-info" data-dismiss="modal">Ok</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <table class="tbldsk table table-striped  m-b-none text-small">
+            <thead>
+              <tr>
+                <th style="border:solid 1px #e0e4e8;width:170px">Nation</th>
+                <th style="border:solid 1px #e0e4e8;">ODDS</th>
+                <th style="border:solid 1px #e0e4e8;">Amount</th>
+                <th style="border:solid 1px #e0e4e8;width:20px">Action</th>
+              </tr>
+            </thead>
+            <tbody id="unmatched"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

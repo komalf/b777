@@ -1,0 +1,35 @@
+
+<header id="header" class="navbar navbar-inverse navbar-fixed-top">
+        <ul class="nav navbar-nav navbar-avatar pull-left">
+                <a class="navbar-brand" [routerLink]="'/mobileview'"><b><i class="fa fa-fw fa-home"></i></b></a>
+                </ul>
+                <ul class="nav navbar-nav navbar-avatar pull-right">
+                        <li class="nav-item">
+                          <a href="#" style="color:#9d9d9dff;">Bal:0.00</a>
+                          
+                
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" style="color:#9d9d9d;">Exp:0</a>
+                
+                        </li>
+                       
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#9d9d9d;"> DLF1<b
+                                class="caret"></b></a>
+                            
+                            <ul class="dropdown-menu " style="padding: 10px;">
+                              <li><a [routerLink]="'/accountmobile'">Account Statement</a></li>
+                              <li> <a [routerLink]="'/unsetteledmobile'">Unsetteled bet</a></li>
+                              <li><a [routerLink]="'/profitmobile'">Profit Loss</a></li>
+                                <li> <a [routerLink]="'/bethistorymobile'">Belt History</a></li>
+                                  <li> <a [routerLink]="'/casinomobile'">Casino Result Report</a></li>
+                                    <li><a [routerLink]="'/setbuttonmobile'">Set Button value</a></li>
+                                    <li><a [routerLink]="'/rules'">rules</a></li>
+                                      <li> <a [routerLink]="'/passwordmobile'">Change Password</a>
+                           
+                                <li><a (click) ="onLogout()">Sign Out</a></li>
+                            </ul>
+                          </li>
+                      </ul>
+    </header>
